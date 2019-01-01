@@ -1,5 +1,5 @@
 // component/snowd/index.js
-
+let animation = wx.createAnimation({})
 Component({
     /**
      * 组件的属性列表
@@ -111,8 +111,7 @@ Component({
         donghua: function(aniobj) {
             let that = this;
             console.log(aniobj)
-
-            let animation = wx.createAnimation({})
+            
             animation.opacity(0).translateY(0).step({
                 duration: 10
             })
@@ -122,27 +121,6 @@ Component({
             animation.translateY(aniobj.windowHeight).left(aniobj.left).rotate(aniobj.rotate).scale(aniobj.scale).step({
                 duration: aniobj.dura
             })
-            // animation.translateY(0).step({
-            //     duration: 10
-            // })
-
-
-            // let animation = wx.createAnimation({})
-            // animation.opacity(0).translateY(0).step({
-            //     duration: 10
-            // })
-            // animation.opacity(1).scale(aniobj.scale).step({
-            //     duration: 0
-            // })
-            // animation.translateY(aniobj.windowHeight).left(aniobj.left).rotate(aniobj.rotate).scale(aniobj.scale).step({
-            //     duration: aniobj.dura
-            // })
-            // animation.opacity(0).step({
-            //     duration: 10
-            // })
-            // animation.translateY(0).step({
-            //     duration: 10
-            // })
             let dobj = {}
             dobj[aniobj.key] = {}
             dobj[aniobj.key]['animt'] = animation.export()
