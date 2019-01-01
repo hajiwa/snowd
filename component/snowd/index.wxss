@@ -1,0 +1,8 @@
+.animat {
+    width: 12px;
+    height: 12px;
+    top: -20px;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999999;
+}

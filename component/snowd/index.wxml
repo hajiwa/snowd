@@ -1,0 +1,1 @@
+<image class='animat' wx:for="{{animationDatas}}" animation="{{item.animt}}" src='{{dxh}}' mode='widthFix'></image>
